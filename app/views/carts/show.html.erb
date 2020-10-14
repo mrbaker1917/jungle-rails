@@ -4,12 +4,12 @@
     <h1>My Cart</h1>
   </header>
 
-    <% if enhanced_cart.length == 0 %>
-      <div class="alert alert-danger">
-        <h3>Your cart is currently empty. Please return to the home page and start shopping!</h3>
-      </div>
-      <%= link_to "Home", root_path, class: 'btn btn-lg btn-primary' %>
-    <% else %>
+  <% if enhanced_cart.length == 0 %>
+    <div class="alert alert-danger">
+      <h3>Your cart is currently empty. Please return to the home page and start shopping!</h3>
+    </div>
+    <%= link_to "Home", root_path, class: 'btn btn-lg btn-primary' %>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -46,9 +46,9 @@
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-amount="<%= cart_subtotal_cents %>"
           data-name="Jungle"
-          data-description="Khurram Virani's Jungle Order"
+          data-description="Mark Baker's Jungle Order"
           data-locale="auto"
-          data-email="kvirani@gmail.com"
+          data-email="mrbaker1917@gmail.com"
           data-currency="cad">
         </script>
       <% end %>
