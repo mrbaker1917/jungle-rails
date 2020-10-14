@@ -76,4 +76,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+end
+
+MoneyRails.configure do |config|
+  config.no_cents_if_whole = false
 end

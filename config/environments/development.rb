@@ -40,4 +40,10 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.web_console.whitelisted_ips = ['10.0.2.0/24']
+
+  
+end
+
+MoneyRails.configure do |config|
+  config.no_cents_if_whole = false
 end
