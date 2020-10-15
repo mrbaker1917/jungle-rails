@@ -1,18 +1,20 @@
-<div class="jumbotron">
-  <h1>Admin::Dashboard</h1>
-  <h2>Number of categories: <%= @category_count %></h2>
-  <h4>Categories: </h4>
-  <ul>
-    <% @category.all.each do |cat| %>
-    <li><%= link_to cat.name, cat %></li>
-    <% end %>
-  </ul>
+<section class="dashboard-show">
+  <div class="jumbotron">
+    <h1>Admin::Dashboard</h1>
+    <h2>Number of categories: <%= @category_count %></h2>
+    <h4>Categories: </h4>
+    <ul>
+      <% @category.all.each do |cat| %>
+      <li><%= link_to cat.name, cat %></li>
+      <% end %>
+    </ul>
 
-  <h2>Number of products: <%= @product_count %></h2>
-  <h4>Products: </h4>
-  <ul>
-    <% @product.all.each do |p| %>
-    <li><%= link_to p.name, p %></li>
-    <% end %>
-  </ul>
-</div>
+    <h2>Number of products: <%= @product_count %></h2>
+    <h4>Products: </h4>
+    <ul>
+      <% @product.all.each do |p| %>
+      <li><%= link_to p.name, p %></li>
+      <% end %>
+    </ul>
+  </div>
+</section>
