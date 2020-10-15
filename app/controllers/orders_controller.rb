@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
     order  = create_order(charge)
 
     if order.valid?
+      completed_order = Order.find(order.id)
       redirect_to order, enhanced_cart: enhanced_cart
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }
@@ -17,14 +18,14 @@ class OrdersController < ApplicationController
   rescue Stripe::CardError => e
     redirect_to cart_path, flash: { error: e.message }
   end
-
+  
   private
-
   def empty_cart!
     # empty hash means no products in cart :)
     update_cart({})
   end
 
+  
   def perform_stripe_charge
     Stripe::Charge.create(
       source:      params[:stripeToken],
@@ -54,5 +55,4 @@ class OrdersController < ApplicationController
     order.save!
     order
   end
-
 end
