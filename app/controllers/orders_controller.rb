@@ -9,8 +9,8 @@ class OrdersController < ApplicationController
     order  = create_order(charge)
 
     if order.valid?
-      completed_order = Order.find(order.id)
-      redirect_to order, enhanced_cart: enhanced_cart
+      empty_cart!
+      redirect_to order
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }
     end
