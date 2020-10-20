@@ -46,4 +46,22 @@ RSpec.describe User, type: :model do
     @a_user.password = "b1p"
     expect(@a_user).to_not be_valid
   end
+  describe '.authenticate_with_credentials' do
+    it 'returns nil if password is incorrect' do
+      foundUser = User.authenticate_with_credentials(@a_user.email, "B1p2m3td")
+      expect(foundUser).to be_nil
+    end
+    it 'returns nil if email is incorrect' do
+      foundUser = User.authenticate_with_credentials("msbaker1917@gmail.com", @a_user.password)
+      expect(foundUser).to be_nil
+    end
+    it 'returns user object if email is wrong case' do
+      foundUser = User.authenticate_with_credentials("MrbaKer1917@gmail.com", @a_user.password)
+      expect(foundUser.email).to eql(@a_user.email)
+    end
+    it 'returns user object if email contains whitespace' do
+      foundUser = User.authenticate_with_credentials("     mrbaker1917@gmail.com   ", @a_user.password)
+      expect(foundUser.email).to eql(@a_user.email)
+    end
+  end
 end
