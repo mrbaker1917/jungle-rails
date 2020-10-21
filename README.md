@@ -35,6 +35,38 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
-* Rspec
+* Rspec-Rails 3.5
+* sass-rails 5.0
+* uglifier 1.3.0
+* jquery-rails
+* turbolinks
+* jbuilder 2.0
+* sdoc
+* bcrypt 3.1.7
+* puma
+* bootstrap-sass 3.36
+* font-awesome-rails
+* money-rails
+* carrierwave
+* rmagick
+* faker
+* byebug
+* quiet-assets
+* dotenv-rails
+* capybara
+* poltergeist
+* database_cleaner
+* web-console 2.0
+* spring
+* newrelic_rpm
+* rails_12factor
 
+## Screenshots
 
+!["Logged out home"](https://github.com/mrbaker1917/jungle-rails/blob/master/docs/jungle_logged_out_home.png)
+!["Logged in user"](https://github.com/mrbaker1917/jungle-rails/blob/master/docs/jungle_logged_in_user.png)
+!["Products by category"](https://github.com/mrbaker1917/jungle-rails/blob/master/docs/jungle_prods_by_category.png)
+!["Cart view"](https://github.com/mrbaker1917/jungle-rails/blob/master/docs/jungle_cart.png)
+!["Completed order"](https://github.com/mrbaker1917/jungle-rails/blob/master/docs/jungle_completed_order.png)
+!["Admin categories"](https://github.com/mrbaker1917/jungle-rails/blob/master/docs/jungle_admin_categories.png)
+!["Admin products"](https://github.com/mrbaker1917/jungle-rails/blob/master/docs/jungle_admin_products.png)
