@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "UserLogins", type: :feature, js: true do
   before(:each) do
-    @a_user = User.create!(first_name: "Mark", last_name: "Baker", email: 'mrbaker1917@gmail.com', password: "B1p2m3td$", password_confirmation: "B1p2m3td$")
+    @a_user = User.create!(first_name: "Mark", last_name: "Baker", email: 'mrbaker1917@gmail.com', password: "1234abcd", password_confirmation: "1234abcd")
   end
 
   scenario "user can log in with correct email and password" do

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @a_user = User.create!(first_name: "Mark", last_name: "Baker", email: 'mrbaker1917@gmail.com', password: "B1p2m3td$", password_confirmation: "B1p2m3td$")
+    @a_user = User.create!(first_name: "Mark", last_name: "Baker", email: 'mrbaker1917@gmail.com', password: "1234abcd", password_confirmation: "1234abcd")
   end
   describe 'Validations' do
     it "validates that user is valid" do
@@ -34,12 +34,12 @@ RSpec.describe User, type: :model do
       expect(password).to match(password_confirmation)
     end
     it "validates that the password and password_confirmation do not match" do
-      password = @a_user.password
-      password_confirmation = "b1p2m3td$"
+      password = "1234abc"
+      password_confirmation = @a_user.password_confirmation
       expect(password).to_not match(password_confirmation)
     end
     it "validates that email addresses must be unique" do
-      expect {User.create!(first_name: "Mark", last_name: "Baker", email: 'mrbaker1917@gmail.com', password: "B1p2m3td$", password_confirmation: "B1p2m3td$")}.to raise_exception(ActiveRecord::RecordInvalid, "Validation failed: Email has already been taken")
+      expect {User.create!(first_name: "Mark", last_name: "Baker", email: 'mrbaker1917@gmail.com', password: "1234abcd", password_confirmation: "1234abcd")}.to raise_exception(ActiveRecord::RecordInvalid, "Validation failed: Email has already been taken")
     end
   end
   it "validates that password has minimum of 4 characters" do
