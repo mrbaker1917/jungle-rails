@@ -1,6 +1,16 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example
+with Lighthouse Labs Web Development BootCamp.
+I added various features to the basic app: 
+  * ability to register and login; admin authorization
+  * for accessing products and categories, and adding to these; also added dashboard with basic facts.
+  * Money formatting made uniform across site.
+  * Number of items in cart updated in navbar.
+  * "Add" button added to product details, which were also improved.
+  * "Sold Out" flag added to products when quantity is zero.
+  * 25 different tests using rspec for unit testing and capybara for feature/integration testing.
+
 
 
 ## Setup
@@ -25,3 +35,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+* Rspec
+
+
